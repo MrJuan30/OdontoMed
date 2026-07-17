@@ -1,42 +1,43 @@
-# sv
-
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+# Astro Starter Kit: Minimal
 
 ```sh
-# create a new project
-npx sv create my-app
+npm create astro@latest -- --template minimal
 ```
 
-To recreate this project with the same configuration:
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-```sh
-# recreate this project
-npx sv@0.16.3 create --template minimal --types ts --add prettier eslint --install npm ./
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-## Developing
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-```sh
-npm run dev
+Any static assets, like images, can be placed in the `public/` directory.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 🧞 Commands
 
-## Building
+All commands are run from the root of the project, from a terminal:
 
-To create a production version of your app:
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-```sh
-npm run build
-```
+## 👀 Want to learn more?
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
