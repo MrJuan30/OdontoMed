@@ -1,6 +1,5 @@
 import Header from '../sections/Header'
 import Hero from '../sections/Hero'
-import About from '../sections/About'
 import Services from '../sections/Services'
 import Technology from '../sections/Technology'
 import Team from '../sections/Team'
@@ -17,7 +16,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
         <Services />
         <Technology />
         <Team />

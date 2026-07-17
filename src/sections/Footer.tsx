@@ -110,7 +110,6 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {[
                 ['Inicio', '#inicio'],
-                ['Nosotros', '#nosotros'],
                 ['Tecnología', '#tecnologia'],
                 ['Equipo', '#equipo'],
                 ['Contacto', '#contacto'],

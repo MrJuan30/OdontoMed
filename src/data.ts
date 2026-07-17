@@ -226,7 +226,6 @@ export const TESTIMONIALS: Testimonial[] = [
 export const MENU_LINKS = [
   { label: 'Formulario de paciente', href: '#contacto' },
   { label: 'Preguntas frecuentes', href: '#testimonios' },
-  { label: 'Nosotros', href: '#nosotros' },
   { label: 'Tecnología', href: '#tecnologia' },
   { label: 'Contacto', href: '#contacto' },
 ]
