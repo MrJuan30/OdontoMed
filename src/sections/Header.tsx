@@ -5,7 +5,7 @@ import { LOCATIONS, MENU_LINKS, SERVICES, WHATSAPP, waLink, DEFAULT_WA_MESSAGE }
 
 /* ---------- Modal de reserva → WhatsApp ---------- */
 function BookingModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const [sede, setSede] = useState(LOCATIONS[0].name)
+  const loc = LOCATIONS[0]
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
@@ -16,7 +16,7 @@ function BookingModal({ open, onClose }: { open: boolean; onClose: () => void })
     e.preventDefault()
     const text = [
       'Hola OdontoMed, quisiera agendar una cita.',
-      `Sede: ${sede}`,
+      `Sede: ${loc.name}`,
       name && `Nombre: ${name}`,
       phone && `Teléfono: ${phone}`,
       message && `Mensaje: ${message}`,
@@ -56,23 +56,6 @@ function BookingModal({ open, onClose }: { open: boolean; onClose: () => void })
         </p>
 
         <form onSubmit={submit} className="mt-7 space-y-4">
-          <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-[#F3F1EC]/50 mb-3">Elige tu sede:</p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              {LOCATIONS.map((loc) => (
-                <label key={loc.id} className="flex items-center gap-2 cursor-pointer text-sm">
-                  <input
-                    type="radio"
-                    name="sede"
-                    checked={sede === loc.name}
-                    onChange={() => setSede(loc.name)}
-                    className="accent-[#25D366] h-4 w-4"
-                  />
-                  {loc.name}
-                </label>
-              ))}
-            </div>
-          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" className={inputCls} />
             <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Teléfono" className={inputCls} />
@@ -174,7 +157,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [bookingOpen, setBookingOpen] = useState(false)
-  const [activePhone, setActivePhone] = useState(LOCATIONS[0])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -252,33 +234,14 @@ export default function Header() {
                 <path d="M1 9L9 1M9 1H3M9 1v6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
               </svg>
             </a>
-            <div className="relative group">
-              <button
-                className={`flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium transition-colors ${
-                  light ? 'hover:bg-white/10' : 'hover:bg-[#101014]/5'
-                }`}
-              >
-                {activePhone.phone}
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                  <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-                </svg>
-              </button>
-              <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute right-0 top-full pt-3">
-                <div className="w-64 rounded-3xl bg-[#101014] p-3 text-[#F3F1EC] shadow-2xl">
-                  {LOCATIONS.map((loc) => (
-                    <a
-                      key={loc.id}
-                      href={loc.phoneHref}
-                      onMouseEnter={() => setActivePhone(loc)}
-                      className="block rounded-2xl px-5 py-3.5 hover:bg-white/10 transition-colors"
-                    >
-                      <span className="block text-sm font-semibold">{loc.phone}</span>
-                      <span className="block text-xs text-[#F3F1EC]/50 mt-0.5">{loc.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <a
+              href={LOCATIONS[0].phoneHref}
+              className={`flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium transition-colors ${
+                light ? 'hover:bg-white/10' : 'hover:bg-[#101014]/5'
+              }`}
+            >
+              {LOCATIONS[0].phone}
+            </a>
             <button
               onClick={() => setBookingOpen(true)}
               className={`ml-2 flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all hover:scale-[1.03] ${

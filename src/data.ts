@@ -41,30 +41,6 @@ export const LOCATIONS: Location[] = [
     ],
     mapsUrl: 'https://maps.google.com/?q=Cra.+13+%2354-10,+Bogotá',
   },
-  {
-    id: 'chico',
-    name: 'Chicó',
-    address: 'Calle 100 #13-21, Chicó, Bogotá',
-    phone: '(601) 257 9600',
-    phoneHref: 'tel:+576012579600',
-    hours: [
-      { days: 'Lun–Vie', time: '8:00 am – 6:00 pm' },
-      { days: 'Sábado', time: '8:00 am – 2:00 pm' },
-    ],
-    mapsUrl: 'https://maps.google.com/?q=Calle+100+%2313-21,+Bogotá',
-  },
-  {
-    id: 'usaquen',
-    name: 'Usaquén',
-    address: 'Calle 119 #7-14, Usaquén, Bogotá',
-    phone: '(601) 629 3800',
-    phoneHref: 'tel:+576016293800',
-    hours: [
-      { days: 'Lun–Vie', time: '8:30 am – 5:30 pm' },
-      { days: 'Sábado', time: '9:00 am – 1:00 pm' },
-    ],
-    mapsUrl: 'https://maps.google.com/?q=Calle+119+%237-14,+Bogotá',
-  },
 ]
 
 export interface Service {
@@ -187,7 +163,6 @@ export const STATS: Stat[] = [
   { value: '20', label: 'años de servicio', tone: 'dark' },
   { value: '8K', label: 'carillas colocadas', tone: 'light' },
   { value: '1.5K', label: 'horas de educación continua', tone: 'dark' },
-  { value: '3', label: 'sedes en Bogotá', tone: 'mid' },
   { value: '12K+', label: 'pacientes satisfechos', tone: 'light' },
   { value: '15K', label: 'coronas colocadas', tone: 'light' },
 ]
@@ -211,14 +186,14 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'Me hice el diseño de sonrisa y el resultado superó mis expectativas. Atención de primer nivel, tecnología impresionante y una calidez humana que no se encuentra en otra parte de Bogotá.',
     name: 'Camila Rodríguez',
-    location: 'Sede Chicó',
+    location: 'Sede Chapinero',
     avatar: '/images/avatar-2.jpg',
   },
   {
     quote:
       'Desde la primera cita todo fue claro y sin dolor. La Dra. Méndez me explicó cada paso de mi rehabilitación. Hoy sonrío con total confianza. Recomiendo OdontoMed de ojos cerrados.',
     name: 'Jorge Andrés Peña',
-    location: 'Sede Usaquén',
+    location: 'Sede Chapinero',
     avatar: '/images/avatar-3.jpg',
   },
 ]
