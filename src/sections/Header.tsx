@@ -5,7 +5,6 @@ import { LOCATIONS, MENU_LINKS, SERVICES, WHATSAPP, waLink, DEFAULT_WA_MESSAGE }
 
 /* ---------- Modal de reserva → WhatsApp ---------- */
 function BookingModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const loc = LOCATIONS[0]
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
@@ -16,7 +15,6 @@ function BookingModal({ open, onClose }: { open: boolean; onClose: () => void })
     e.preventDefault()
     const text = [
       'Hola OdontoMed, quisiera agendar una cita.',
-      `Sede: ${loc.name}`,
       name && `Nombre: ${name}`,
       phone && `Teléfono: ${phone}`,
       message && `Mensaje: ${message}`,

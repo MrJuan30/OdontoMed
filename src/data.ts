@@ -6,8 +6,8 @@ export const BRAND = {
 }
 
 export const WHATSAPP = {
-  numberIntl: '573001234567',
-  display: '+57 300 123 4567',
+  numberIntl: '573209936170',
+  display: '320 993 6170',
 }
 
 export const waLink = (message?: string) =>
@@ -30,16 +30,16 @@ export interface Location {
 
 export const LOCATIONS: Location[] = [
   {
-    id: 'chapinero',
-    name: 'Chapinero',
-    address: 'Cra. 13 #54-10, Chapinero, Bogotá',
-    phone: '(601) 743 2100',
-    phoneHref: 'tel:+576017432100',
+    id: 'sede-unica',
+    name: 'OdontoMed',
+    address: 'Dg. 79a Bis #55 a 11, Bogotá',
+    phone: '320 993 6170',
+    phoneHref: 'tel:+573209936170',
     hours: [
       { days: 'Lun–Vie', time: '8:00 am – 6:00 pm' },
       { days: 'Sábado', time: '8:00 am – 2:00 pm' },
     ],
-    mapsUrl: 'https://maps.google.com/?q=Cra.+13+%2354-10,+Bogotá',
+    mapsUrl: 'https://maps.google.com/?q=Dg.+79a+Bis+%2355+a+11,+Bogotá',
   },
 ]
 
@@ -179,21 +179,21 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'El equipo es increíble, como siempre. Todos son amables y te hacen sentir bienvenido. El Dr. Restrepo se toma el tiempo de escuchar y brindar un servicio excepcional. La clínica se siente como casa.',
     name: 'María Fernanda Gómez',
-    location: 'Sede Chapinero',
+    location: 'Bogotá',
     avatar: '/images/avatar-1.jpg',
   },
   {
     quote:
       'Me hice el diseño de sonrisa y el resultado superó mis expectativas. Atención de primer nivel, tecnología impresionante y una calidez humana que no se encuentra en otra parte de Bogotá.',
     name: 'Camila Rodríguez',
-    location: 'Sede Chapinero',
+    location: 'Bogotá',
     avatar: '/images/avatar-2.jpg',
   },
   {
     quote:
       'Desde la primera cita todo fue claro y sin dolor. La Dra. Méndez me explicó cada paso de mi rehabilitación. Hoy sonrío con total confianza. Recomiendo OdontoMed de ojos cerrados.',
     name: 'Jorge Andrés Peña',
-    location: 'Sede Chapinero',
+    location: 'Bogotá',
     avatar: '/images/avatar-3.jpg',
   },
 ]

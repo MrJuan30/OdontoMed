@@ -5,7 +5,6 @@ import WhatsAppIcon from '../components/WhatsAppIcon'
 import { LOCATIONS, SERVICES, WHATSAPP, waLink, DEFAULT_WA_MESSAGE } from '../data'
 
 export default function Footer() {
-  const loc = LOCATIONS[0]
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
@@ -14,7 +13,6 @@ export default function Footer() {
     e.preventDefault()
     const text = [
       'Hola OdontoMed, vengo del formulario de paciente de la página web.',
-      `Sede: ${loc.name}`,
       name && `Nombre: ${name}`,
       phone && `Teléfono: ${phone}`,
       message && `Mensaje: ${message}`,
@@ -108,18 +106,17 @@ export default function Footer() {
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <p className="text-xs uppercase tracking-[0.22em] text-[#F3F1EC]/40">Nuestra sede</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-[#F3F1EC]/40">Ubicación</p>
             <div className="mt-5">
               <div className="border-l border-white/15 pl-5">
                 <a
                   href={LOCATIONS[0].mapsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-lg font-semibold underline underline-offset-4 hover:text-[#25D366] transition-colors"
+                  className="text-lg font-semibold underline underline-offset-4 hover:text-[#25D366] transition-colors block"
                 >
-                  {LOCATIONS[0].name}
+                  {LOCATIONS[0].address}
                 </a>
-                <p className="mt-3 text-sm leading-relaxed text-[#F3F1EC]/55">{LOCATIONS[0].address}</p>
                 <a href={LOCATIONS[0].phoneHref} className="mt-3 block text-base font-bold hover:text-[#25D366] transition-colors">
                   {LOCATIONS[0].phone}
                 </a>
