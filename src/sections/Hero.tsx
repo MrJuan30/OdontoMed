@@ -37,8 +37,8 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-[#F3F1EC]/55">En Bogotá:</p>
-            <p className="mt-2 text-lg font-medium">Chapinero · Chicó · Usaquén</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#F3F1EC]/55">Sede:</p>
+            <p className="mt-2 text-lg font-medium">Bogotá</p>
             <p className="mt-4 max-w-md text-[#F3F1EC]/75 leading-relaxed">
               Diseñamos sonrisas tan saludables como hermosas.
             </p>
